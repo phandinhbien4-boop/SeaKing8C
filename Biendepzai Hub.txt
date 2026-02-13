@@ -46,7 +46,7 @@ Tabs.Main:AddButton({
     end
 })
 
-Tabs.Main:AddButton({
+Tabs.SeaKing:AddButton({
     Title = "QuanTum Hub",
     Description = "Click to run QuanTum Hub script",
     Callback = function()
@@ -54,7 +54,7 @@ Tabs.Main:AddButton({
     end
 })
 
-Tabs.Main:AddButton({
+Tabs.SeaKing:AddButton({
     Title = "Bacon Hub",
     Description = "Click to run Bacon Hub script",
     Callback = function()
