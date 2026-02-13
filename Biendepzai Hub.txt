@@ -12,7 +12,7 @@ local Window = Fluent:CreateWindow({
 
 local Tabs = {
     Main = Window:AddTab({ Title = "Main Hub", Icon = "home" }),
-    Farm = Window:AddTab({ Title = "Farm", Icon = "rbxassetid://4483345998" })
+    SeaKing = Window:AddTab({ Title = "SeaKing", Icon = "star" })
 }
 
 Tabs.Main:AddParagraph({
@@ -55,30 +55,6 @@ Tabs.Main:AddButton({
 })
 
 Tabs.Main:AddButton({
-    Title = "Huylovemy / key : Huydepzai",
-    Description = "Click to run Huylovemy script",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Huylovemy/Bear-hud-t-h/refs/heads/main/Huylovevkmy"))()
-    end
-})
-
-Tabs.Main:AddButton({
-    Title = "Blue X",
-    Description = "Click to run Blue X script",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-BlueX/BlueX-Hub/refs/heads/main/Main.lua"))()
-    end
-})
-
-Tabs.Main:AddButton({
-    Title = "Gravity Hub",
-    Description = "Click to run Gravity Hub script",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-GravityHub/BloxFruit/refs/heads/main/Main.lua"))()
-    end
-})
-
-Tabs.Main:AddButton({
     Title = "Bacon Hub",
     Description = "Click to run Bacon Hub script",
     Callback = function()
@@ -86,24 +62,37 @@ Tabs.Main:AddButton({
     end
 })
 
-Tabs.Main:AddButton({
+Tabs.SeaKing:AddButton({
+    Title = "Huylovemy / key : Huydepzai",
+    Description = "Click to run Huylovemy script",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Huylovemy/Bear-hud-t-h/refs/heads/main/Huylovevkmy"))()
+    end
+})
+
+Tabs.SeaKing:AddButton({
+    Title = "Blue X",
+    Description = "Click to run Blue X script",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-BlueX/BlueX-Hub/refs/heads/main/Main.lua"))()
+    end
+})
+
+Tabs.SeaKing:AddButton({
+    Title = "Gravity Hub",
+    Description = "Click to run Gravity Hub script",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-GravityHub/BloxFruit/refs/heads/main/Main.lua"))()
+    end
+})
+
+Tabs.SeaKing:AddButton({
     Title = "Turbo Fix Lag",
     Description = "Click to run Turbo Fix Lag script",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/TurboLite/Script/main/FixLag.lua"))()
     end
 })
-
-local Toggle = Tabs.Farm:AddToggle("AutoFarmLevel", {Title = "Auto Farm Level", Default = false })
-
-Toggle:OnChanged(function()
-    _G.AutoFarm = Toggle.Value
-    spawn(function()
-        while _G.AutoFarm do
-            task.wait()
-        end
-    end)
-end)
 
 local ScreenGui = Instance.new("ScreenGui")
 local ToggleButton = Instance.new("TextButton")
